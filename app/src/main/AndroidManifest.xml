@@ -16,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".CrossExampleActivity" android:label="@string/action_cross_example">
+
+        </activity>
+        <activity android:name=".FrequenzDomainActivity" android:label="@string/action_frequency_domain">
+
+        </activity>
+        <activity android:name=".HLSExampleActivity" android:label="@string/action_hls_example">
+
+        </activity>
+
+
     </application>
 
 </manifest>
