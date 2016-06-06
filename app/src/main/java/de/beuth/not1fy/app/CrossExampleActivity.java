@@ -21,7 +21,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by RaulVinhKhoa on 01.06.2016.
+ * Created by Raul Vinh Khoa Nguyen on 01.06.2016.
  */
 public class CrossExampleActivity extends AppCompatActivity {
     boolean playing = false;

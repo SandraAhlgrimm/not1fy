@@ -6,6 +6,7 @@
 #include <SLES/OpenSLES.h>
 #include <SLES/OpenSLES_AndroidConfiguration.h>
 
+
 static void playerEventCallbackA(void *clientData, SuperpoweredAdvancedAudioPlayerEvent event, void * __unused value) {
     if (event == SuperpoweredAdvancedAudioPlayerEvent_LoadSuccess) {
     	SuperpoweredAdvancedAudioPlayer *playerA = *((SuperpoweredAdvancedAudioPlayer **)clientData);
@@ -158,7 +159,7 @@ bool SuperpoweredExample::process(short int *output, unsigned int numberOfSample
 
 static SuperpoweredExample *example = NULL;
 
-extern "C" JNIEXPORT void Java_de_beuth_not1fy_app_CrossExampleActivity_SuperpoweredExample(JNIEnv *javaEnvironment, jobject __unused obj, jint samplerate, jint buffersize, jstring apkPath, jint fileAoffset, jint fileAlength, jint fileBoffset, jint fileBlength) {
+extern "C" JNIEXPORT void Java_de_beuth_not1fy_abc_SuperpoweredExample(JNIEnv *javaEnvironment, jobject __unused obj, jint samplerate, jint buffersize, jstring apkPath, jint fileAoffset, jint fileAlength, jint fileBoffset, jint fileBlength) {
     const char *path = javaEnvironment->GetStringUTFChars(apkPath, JNI_FALSE);
     example = new SuperpoweredExample((unsigned int)samplerate, (unsigned int)buffersize, path, fileAoffset, fileAlength, fileBoffset, fileBlength);
     javaEnvironment->ReleaseStringUTFChars(apkPath, path);
